@@ -1,0 +1,4 @@
+spotipy
+pyyaml
+pyqt5
+pyqtdarktheme

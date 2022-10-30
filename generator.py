@@ -168,13 +168,12 @@ class choose_category_window(QWidget):
         self.main_vbox = QVBoxLayout()
         self.setLayout(self.main_vbox)
 
-
         for cat in self.categories:
             current_btn = QPushButton(cat.name)
             current_btn.clicked.connect(lambda checked, id=cat.id: self.category_btn_click(id))
             self.main_vbox.addWidget(current_btn)
 
-
+    
 
     def category_btn_click(self, category_id):
         results = self.sp_client.get_category_playlists(category_id)
