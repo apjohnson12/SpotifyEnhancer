@@ -28,7 +28,7 @@ class ui_main(QMainWindow):
 
     def top_level_screen(self):
 
-        with open("loginTest.yaml", "r") as f:
+        with open("login.yaml", "r") as f:
             loginInfo = yaml.safe_load(f)
         self.sp_client = SpotifyClient(loginInfo["client_id"], loginInfo["username"], loginInfo["client_secret"], loginInfo["redirect_uri"])
 
@@ -185,43 +185,6 @@ class choose_category_window(QWidget):
         rec_songs = self.sp_client.get_recommendations(seed_tracks, limit="20")
         
         self.sp_client.add_songs_to_queue(rec_songs)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    #TO DO:
-    # create button that grabs recommended songs based on seed songs
-    # Ask ryan how to return something from a button click and capture it where function is called (connect value type giving me issues)
-    # create getRecommendedSongsClick() function
-    # maybe bring to new page once recommended songs come back
-    # have button on that page that will create playlist
-    # once playlist is created, have new button appear on page that lets playback start in spotify client for the new playlist        
-    # should I set global variables that are going to be updated with these song lists? Or should I just pass that list into another function and never return to my main window?   
-    # Ask if I am keeping track of the last_played_tracks properly. Should it be initialized upon construction of the main_ui class?
-    # How to make logic loop back to the beginning on click of the X in second popup 
-    # grab all playlists, have them indexed in a list on screen, havbe user type in the index they want. Grab random five songs from the playlist
-    # create recommended playlist from that or fill up queue after that playlist is done. Start playing selected playlist and fill queue with 20 new songs
-    # when playlist is at its last song. Then when queue is almost empty, do that again. (HOW TO LOOP AND KEEP CHECKING??) (COULD JUST FILL QUEUE TO 100 and that would siffice, but try and loop)
-    # maybe just have the same 5 recent song functionality, but have an option to fill queue instead of a playlist\
-    # a lot of these functions give limits as to what I can return. For example how can i get more than 20 categories? I would like to return all of them, can I somehow do a 'next' and keep going?
-    # HOW TO USE NEXT?????
-
-
 
 
 if __name__ == "__main__":
