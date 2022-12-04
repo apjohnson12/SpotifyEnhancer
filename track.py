@@ -1,5 +1,5 @@
 class Track:
-    #Track represents a piece of music on Spotify
+    # Track represents a piece of music on Spotify
 
     def __init__(self, name, uri, artist):
 
