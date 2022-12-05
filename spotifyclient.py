@@ -8,8 +8,6 @@ from playlist import Playlist
 from category import Category
 import random
 
-# sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope, client_id="03cd292508c54cacacb94e10b04c309d", client_secret="cb1aeee880e14ca8a6f3806a57d66d46", redirect_uri="http://localhost:9090"))
-
 
 class SpotifyClient:
     def __init__(self, client_id, user_id, client_secret, redirect_uri):
