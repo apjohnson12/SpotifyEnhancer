@@ -29,6 +29,7 @@ class SpotifyClient:
     def get_recent_tracks(self, limit=10):
 
         res = self.spotipyObject.current_user_recently_played(limit=limit)
+        print(res)
         tracks = [
             Track(
                 track["track"]["name"],

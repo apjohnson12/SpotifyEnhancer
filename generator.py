@@ -29,7 +29,7 @@ class ui_main(QMainWindow):
 
     def top_level_screen(self):
 
-        with open("login.yaml", "r") as f:
+        with open("loginTest.yaml", "r") as f:
             loginInfo = yaml.safe_load(f)
         self.sp_client = SpotifyClient(
             loginInfo["client_id"],
